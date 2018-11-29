@@ -65,7 +65,7 @@
             $(this).next('input').attr('escribe','contraseña');
             $(this).find('i').removeClass('fa-eye-slash');
             $(this).find('i').addClass('fa-eye');
-            showPass = 0;
+            showPass = 1;
         }
         
     });
