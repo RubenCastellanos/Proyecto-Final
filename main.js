@@ -27,7 +27,7 @@
     });
 
     function validate (input) {
-        if($(input).attr('type') == 'email' || $(input).attr('nombre') == 'email') {
+        if($(input).attr('escribe') == 'email' || $(input).attr('nombre') == 'email') {
             if($(input).val().trim().match(/^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{1,5}|[0-9]{1,3})(\]?)$/) == null) {
                 return false;
             }
@@ -56,13 +56,13 @@
     var showPass = 0;
     $('.btn-show-pass').on('click', function(){
         if(showPass == 0) {
-            $(this).next('input').attr('type','text');
+            $(this).next('input').attr('escribe','text');
             $(this).find('i').removeClass('fa-eye');
             $(this).find('i').addClass('fa-eye-slash');
             showPass = 1;
         }
         else {
-            $(this).next('input').attr('type','contraseña');
+            $(this).next('input').attr('escribe','contraseña');
             $(this).find('i').removeClass('fa-eye-slash');
             $(this).find('i').addClass('fa-eye');
             showPass = 0;
